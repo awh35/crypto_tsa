@@ -10,7 +10,7 @@ def rolling_2d_to_1d_arr(arr, func, window):
     T, N = arr.shape
     output = np.zeros((T, N), dtype=float)
     for t in tqdm(range(window, T)):
-        roll_arr = arr[(t - window) : (t+1), :]
+        roll_arr = arr[(t - window) : (t + 1), :]
         idxs_selected = ~np.any(np.isnan(roll_arr), axis=0)
         if not sum(idxs_selected):
             continue
@@ -21,7 +21,7 @@ def rolling_2d_to_1d_arr(arr, func, window):
 
 
 def rolling_df_to_series(df, func, window):
-    df.replace((-np.inf, np.inf), np.nan, inplace=True)
+    df = df.copy().replace((-np.inf, np.inf), np.nan)
     idx, cols = df.index, df.columns
     output_arr = rolling_2d_to_1d_arr(df.values, func, window)
     return pd.DataFrame(output_arr, index=idx, columns=cols)
