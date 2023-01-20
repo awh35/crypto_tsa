@@ -17,7 +17,7 @@ This notebook fits PCA and Factor Analysis on a daily basis, and computes out-of
 
 
 ## 2. GARCH Modelling 
-This notebook contains a simple implementation of the classical GARCH model for heteroskedastic returns series. It is evaluated statistically across time. 
+This notebook contains a simple implementation of the classical GARCH model for heteroskedastic returns series. It is fitted and evaluated statistically across time. 
 
 
 ## 3. Neural Network Heteroskedastic Regression
