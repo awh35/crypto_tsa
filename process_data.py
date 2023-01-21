@@ -19,6 +19,6 @@ def process_csvs():
         df["date"] = df["time"].dt.date
         df.to_csv(file, index=False)
 
-    
+
 if __name__ == "__main__":
     process_csvs()
