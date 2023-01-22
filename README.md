@@ -9,6 +9,7 @@ git clone git@github.com:awh35/crypto_tsa.git
 cd crypto_tsa
 python3 -m venv env
 source env/bin/activate
+pip install -r requirements.txt
 python3 process_data.py
 ```
 
